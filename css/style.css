@@ -7,5 +7,118 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: white;
 }
 
+#wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+img {
+    width: 100%;
+}
+
+.gray_text {
+    color: gray;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+/* MAIN */
+main {
+    height: calc( 100% - 90px );
+}
+
+/* nav */
+nav .nav_container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    width: 230px;
+    height: 100%;
+    float: left;
+    background-color: black;
+    overflow: hidden;
+}
+
+nav .logo img {
+    width: 130px;
+    height: auto;
+}
+
+nav .main_links img {
+    width: 25px;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* bisogna dare min-height per l'effetto che fa quando
+viene ridotta l'altezza della nav bar */
+nav .playlist_container {
+    min-height: 100px;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+/* 100% di altezza alla ul playlist di modo che si
+adatti all'altezza della nav bar quando viene ridotta */
+nav .playlist {
+    height: 100%;
+    overflow-y: auto;
+}
+
+nav .add_playlist::before {
+    content: "+";
+    color: black;
+    background-color: gray;
+}
+
+nav .install_app {
+    border-bottom: 1px solid gray;
+}
+
+nav .install_app img {
+    width: 18px;
+    height: auto;
+    vertical-align: sub;
+}
+
+nav .user_name img {
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+/* contenuto main */
+.main_content {
+    width: calc( 100% - 230px );
+    height: 100%;
+    float: left;
+    background-color: #141922;
+    overflow-y: auto;
+}
+
+/* FOOTER */
+footer {
+    height: 90px;
+    background-color: #282828;
+    overflow: hidden;
+}
