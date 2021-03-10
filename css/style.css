@@ -74,6 +74,8 @@ nav .playlist_container {
     min-height: 100px;
     overflow: hidden;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* 100% di altezza alla ul playlist di modo che si
