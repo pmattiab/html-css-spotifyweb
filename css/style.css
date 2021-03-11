@@ -211,3 +211,90 @@ footer {
     background-color: #282828;
     overflow: hidden;
 }
+
+footer .footer_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .listening {
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer .listening .disk_playing {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+footer .listening .disk_img {
+    width: 45px;
+    height: auto;
+    margin-right: 10px;
+}
+
+footer .listening .subtitle {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+footer .listening .heart {
+    margin-left: 15px;
+}
+
+footer .listening .folder {
+    margin-left: 15px;
+}
+
+footer .controls {
+    text-align: center;
+    flex-grow: 1;
+}
+
+footer .controls .fas{
+    font-size: 18px;
+    margin: 0 25px;
+}
+
+footer .controls .fa-play-circle {
+    font-size: 30px;
+    vertical-align: sub;
+}
+
+footer .navigation_bar {
+    margin: 10px 0;
+    width: 100%;
+}
+
+footer .navigation_bar .under_bar {
+    display: inline-block;
+    width: 50%;
+    height: 4px;
+    background-color: gray;
+    border-radius: 5px;
+    vertical-align: middle;
+    margin: 0 15px;
+}
+
+footer .navigation_bar .over_bar {
+    width: 25%;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+footer .navigation_bar span {
+    display: inline-block;
+    font-size: 10px;
+    vertical-align: middle;
+}
+
+footer .volume {
+    height: 100%;
+}
