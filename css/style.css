@@ -34,6 +34,10 @@ h2 {
     margin-bottom: 10px;
 }
 
+h4 {
+    margin: 15px 0 5px;
+}
+
 .subtitle {
     color: gray;
     font-size: 13px;
@@ -224,12 +228,36 @@ main .row .disk_box {
     text-align: center;
 }
 
-main .row .disk_box img {
-    height: auto;
+main .row .disk_img {
+    position: relative;
+}
+
+main .disk_img .layover {
+    width: 100%;
+    height: calc( 100% - 4px );
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+main .disk_box:hover .layover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .layover .fa-play-circle {
+    font-size: 60px;
 }
 
 /* sezione artisti popolari */
 #popular_artists .disk_box img {
+    border-radius: 50%;
+}
+
+#popular_artists .disk_box .layover {
     border-radius: 50%;
 }
 
@@ -262,7 +290,7 @@ footer .listening .disk_playing {
     align-items: center;
 }
 
-footer .listening .disk_img {
+footer .listening .disk_playing_img {
     width: 45px;
     height: auto;
     margin-right: 10px;
