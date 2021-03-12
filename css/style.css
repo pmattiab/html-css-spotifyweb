@@ -106,6 +106,7 @@ nav {
     overflow: hidden;
 }
 
+/* desktop nav */
 #desktop_nav {
     height: 100%;
     display: flex;
@@ -123,10 +124,6 @@ nav {
     margin: 10px 0 20px;
 }
 
-#desktop_nav .main_links img {
-    margin-right: 5px;
-}
-
 #desktop_nav .main_links li {
     padding-left: 20px;
     margin-bottom: 10px;
@@ -140,6 +137,7 @@ nav {
     width: 30px;
     height: auto;
     vertical-align: middle;
+    margin-right: 5px;
 }
 
 /* bisogna dare min-height per l'effetto che fa quando
@@ -195,6 +193,25 @@ adatti all'altezza della nav bar quando viene ridotta */
     vertical-align: middle;
 }
 
+/* mobile nav */
+#mobile_nav {
+    height: 100%;
+    padding: 20px 10px;
+    display: none;
+}
+
+#mobile_nav .main_links {
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+#mobile_nav .user_name img {
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    border-radius: 50%;
+}
+
 /* contenuto main */
 .main_content {
     width: calc( 100% - 230px );
@@ -215,15 +232,16 @@ main .main_nav .open_tab {
     border-bottom: 2px solid greenyellow;
 }
 
-main section {
-    margin: 20px 0;
-}
-
 main .genres_list li {
     display: inline-block;
-    padding: 0 10px;
+    padding: 10px;
     text-transform: uppercase;
     margin-bottom: 15px;
+}
+
+/* sezioni del main */
+main section {
+    margin: 20px 0;
 }
 
 main .row .disk_list {
@@ -441,6 +459,12 @@ footer .volume_bar .over_bar:hover {
 
     #desktop_nav {
         display: none;
+    }
+
+    #mobile_nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .upgrade_banner {
