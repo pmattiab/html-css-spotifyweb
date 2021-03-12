@@ -21,8 +21,8 @@
             <!-- inizio nav -->
             <nav>
 
-                <!-- inizio contenitore nav -->
-                <div class="nav_container">
+                <!-- inizio contenitore nav desktop -->
+                <div id="desktop_nav" class="nav_container">
 
                     <!-- logo -->
                     <div class="logo">
@@ -42,9 +42,7 @@
                     <div class="playlist_container">
                         
                         <!-- titolo playlist -->
-                        <h3>
-                            PLAYLIST
-                        </h3>
+                        <h3>PLAYLIST</h3>
 
                         <!-- crea playlist -->
                         <div class="add_btn">
@@ -80,7 +78,37 @@
                     </div>
 
                 </div>
-                <!-- fine contenitore nav -->
+                <!-- fine contenitore nav desktop -->
+
+                <!-- inizio contenitore nav desktop -->
+                <div id="mobile_nav" class="nav_container">
+
+                    <!-- logo -->
+                    <div class="logo">
+                        <img src="img/logo-small.svg" alt="logo">
+                    </div> 
+
+                    <!-- link principali -->
+                    <div class="main_links">
+                        <ul>
+                            <li class="open_tab"><a href="#"><img src="img/home.svg" alt="home"></i></a></li>
+                            <li><a href="#"><img src="img/search.svg" alt="home"></i></a></li>
+                            <li><a href="#"><img src="img/libreria.svg" alt="home"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- installa app -->
+                    <div class="install_app">
+                        <a href="#"><img src="img/download.svg" alt="download app"></a>
+                    </div>
+                    
+                    <!-- user -->
+                    <div class="user_name">
+                        <img src="img/profile.svg" alt="profile">
+                    </div>
+
+                </div>
+                <!-- fine contenitore nav desktop -->
 
             </nav>
             <!-- fine nav -->
@@ -103,7 +131,7 @@
 
                 <!-- inizio sezione ascoltati recente -->
                 <section id="recently_played">
-                    <div class="row clearfix">
+                    <div class="row">
                     
                         <div class="title">
                             <h2>Recently played</h2>
@@ -185,7 +213,7 @@
 
                 <!-- inizio sezione creato per -->
                 <section id="created_for">
-                    <div class="row clearfix">
+                    <div class="row">
 
                         <div class="title">
                             <h2>Creato per John Doe</h2>
@@ -301,7 +329,7 @@
                     </div>
                     <div class="navigation_bar">
                         <span>0:25</span>
-                        <div class="under_bar">
+                        <div class="under_bar pointer">
                             <div class="over_bar"></div>
                         </div>
                         <span>4:35</span>
@@ -317,7 +345,7 @@
                     </div>
 
                     <div class="volume_bar">
-                        <div class="under_bar">
+                        <div class="under_bar pointer">
                             <div class="over_bar"></div>
                         </div>
                     </div>

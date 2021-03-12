@@ -98,12 +98,6 @@ main {
 }
 
 /* nav */
-nav .nav_container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
 nav {
     width: 230px;
     height: 100%;
@@ -112,27 +106,37 @@ nav {
     overflow: hidden;
 }
 
-nav .logo {
+#desktop_nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#desktop_nav .logo {
     width: 150px;
     height: auto;
     padding: 20px 0;
     margin-left: 20px;
 }
 
-nav .main_links {
+#desktop_nav .main_links {
     margin: 10px 0 20px;
 }
 
-nav .main_links li {
+#desktop_nav .main_links img {
+    margin-right: 5px;
+}
+
+#desktop_nav .main_links li {
     padding-left: 20px;
     margin-bottom: 10px;
 }
 
-nav .main_links .open_tab {
+#desktop_nav .main_links .open_tab {
     border-left: 2px solid greenyellow;
 }
 
-nav .main_links img {
+#desktop_nav .main_links img {
     width: 30px;
     height: auto;
     vertical-align: middle;
@@ -140,7 +144,7 @@ nav .main_links img {
 
 /* bisogna dare min-height per l'effetto che fa quando
 viene ridotta l'altezza della nav bar */
-nav .playlist_container {
+#desktop_nav .playlist_container {
     margin: 0 20px;
     min-height: 100px;
     overflow: hidden;
@@ -149,41 +153,41 @@ nav .playlist_container {
     flex-direction: column;
 }
 
-nav .add_btn,
-nav .playlist li {
+#desktop_nav .add_btn,
+#desktop_nav .playlist li {
     margin: 10px 0;
 }
 
 /* 100% di altezza alla ul playlist di modo che si
 adatti all'altezza della nav bar quando viene ridotta */
-nav .playlist {
+#desktop_nav .playlist {
     height: 100%;
     overflow-y: auto;
 }
 
-.add_playlist .fa-plus-square {
+#desktop_nav .fa-plus-square {
     font-size: 40px;
     margin-right: 10px;
     vertical-align: middle;
 }
 
-nav .install_app {
+#desktop_nav .install_app {
     padding: 10px 0;
     margin: 0 20px;
     border-bottom: 1px solid gray;
 }
 
-nav .install_app img {
+#desktop_nav .install_app img {
     width: 18px;
     height: auto;
     vertical-align: sub;
 }
 
-nav .user_name {
+#desktop_nav .user_name {
     margin: 10px 20px;
 }
 
-nav .user_name img {
+#desktop_nav .user_name img {
     width: 30px;
     height: 30px;
     background-color: gray;
@@ -212,20 +216,26 @@ main .main_nav .open_tab {
 }
 
 main section {
-    margin: 40px 0;
+    margin: 20px 0;
 }
 
 main .genres_list li {
     display: inline-block;
     padding: 0 10px;
     text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+main .row .disk_list {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 main .row .disk_box {
-    float: left;
     width: calc( 100% / 6 );
     padding-left: 15px;
     text-align: center;
+    margin-bottom: 25px;
 }
 
 main .row .disk_img {
@@ -262,6 +272,11 @@ main .layover .fa-play-circle {
 }
 
 /* FOOTER */
+/* !!! sistemare spaziature footer per le media query !!! */
+/* !!! sistemare spaziature footer per le media query !!! */
+/* !!! sistemare spaziature footer per le media query !!! */
+/* !!! sistemare spaziature footer per le media query !!! */
+/* !!! sistemare spaziature footer per le media query !!! */
 footer {
     height: 90px;
     background-color: #282828;
@@ -322,7 +337,7 @@ footer .controls {
 
 footer .controls .fas{
     font-size: 18px;
-    margin: 0 25px;
+    margin: 0 20px;
 }
 
 footer .controls .fa-play-circle {
@@ -356,7 +371,7 @@ footer .navigation_bar .over_bar {
     border-radius: 5px;
 }
 
-footer .navigation_bar .over_bar:hover {
+footer .under_bar:hover .over_bar {
     background-color: greenyellow;
 }
 
@@ -400,4 +415,42 @@ footer .volume_bar .over_bar {
 
 footer .volume_bar .over_bar:hover {
     background-color: greenyellow;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 1170px) {
+    main .row .disk_box {
+        width: calc( 100% / 4 );
+    }   
+}
+
+@media screen and (max-width: 992px) {
+      
+}
+
+@media screen and (max-width: 768px) {
+    main .row .disk_box {
+        width: calc( 100% / 2 );
+    }   
+}
+
+@media screen and (max-width: 550px) {
+    nav {
+        width: 50px;
+    }
+
+    #desktop_nav {
+        display: none;
+    }
+
+    .upgrade_banner {
+        width: calc( 100% - 50px );
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main_content {
+        width: calc( 100% - 50px );
+    }
 }
