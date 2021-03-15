@@ -89,7 +89,7 @@ a:hover {
 }
 
 .upgrade_banner .upgrade_btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 /* MAIN */
@@ -222,6 +222,7 @@ adatti all'altezza della nav bar quando viene ridotta */
     padding: 90px 15px 20px 0;
 }
 
+/* nav nel main */
 main .main_nav {
     width: 100%;
     text-align: center;
@@ -291,11 +292,6 @@ main .layover .fa-play-circle {
 }
 
 /* FOOTER */
-/* !!! sistemare spaziature footer per le media query !!! */
-/* !!! sistemare spaziature footer per le media query !!! */
-/* !!! sistemare spaziature footer per le media query !!! */
-/* !!! sistemare spaziature footer per le media query !!! */
-/* !!! sistemare spaziature footer per le media query !!! */
 footer {
     height: 90px;
     background-color: #282828;
@@ -309,6 +305,7 @@ footer .footer_container {
     align-items: center;
 }
 
+/* colonna sinistra footer */
 footer .listening {
     width: 220px;
     padding-left: 10px;
@@ -328,13 +325,23 @@ footer .listening .disk_playing_img {
     margin-right: 10px;
 }
 
-footer .listening a {
+footer .disk_name {
+    flex-grow: 1;
+}
+
+footer .disk_name a {
     font-size: 11px;
 }
 
-footer .listening a:hover {
+footer .disk_name a:hover {
     color: gray;
     text-decoration: underline;
+}
+
+footer .listening .disk_fav {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
 }
 
 footer .listening .heart:hover,
@@ -342,9 +349,12 @@ footer .listening .folder:hover {
     color: white;
 }
 
+/* colonna centrale footer */
 footer .controls {
-    text-align: center;
     flex-grow: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 footer .controls .fas{
@@ -353,12 +363,12 @@ footer .controls .fas{
 }
 
 footer .controls .fa-play-circle {
-    font-size: 30px;
+    font-size: 35px;
     vertical-align: sub;
 }
 
 footer .controls .fa-play-circle:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 footer .navigation_bar {
@@ -369,7 +379,7 @@ footer .navigation_bar {
 footer .navigation_bar .under_bar {
     display: inline-block;
     width: 50%;
-    height: 4px;
+    height: 6px;
     background-color: gray;
     border-radius: 5px;
     vertical-align: middle;
@@ -393,32 +403,27 @@ footer .navigation_bar span {
     vertical-align: middle;
 }
 
-footer .volume {
+/* colonna destra footer */
+footer .audio {
     width: 220px;
     padding-right: 10px;
     display: flex;
-}
-
-footer .volume .fas {
-    font-size: 15px;
-}
-
-footer .volume_icon {
-    width: 100px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
+footer .audio .fas {
+    font-size: 15px;
+    margin: 0 2%;
+}
+
 footer .volume_bar {
-    width: 100%;
-    flex-grow: 1;
+    width: 60%;
 }
 
 footer .volume_bar .under_bar {
     display: inline-block;
     width: 90%;
-    height: 4px;
+    height: 6px;
     background-color: gray;
     border-radius: 5px;
     vertical-align: middle;
@@ -437,24 +442,15 @@ footer .volume_bar .over_bar:hover {
 }
 
 /* MEDIA QUERY */
-/* large screen */
-@media screen and (max-width: 1170px) {
-    main .row .disk_box {
-        width: calc( 100% / 5 );
-    }   
-}
-
 /* medium screen */
 @media screen and (max-width: 880px) {
     main .row .disk_box {
         width: calc( 100% / 4 );
-    }   
-}
-
-@media screen and (max-width: 760px) {
-    main .row .disk_box {
-        width: calc( 100% / 3 );
-    }   
+    }
+    
+    footer .navigation_bar .under_bar {
+        width: 60%;
+    }
 }
 
 /* small screen */
@@ -462,13 +458,20 @@ footer .volume_bar .over_bar:hover {
     main .row .disk_box {
         width: calc( 100% / 2 );
     }
-    
+
     footer .listening,
-    footer .volume {
-        width: 200px;
+    footer .audio {
+        width: 180px;
+    }
+
+    footer .listening .disk_fav {
+        width: 10%;
+        flex-direction: column;
+        align-items: flex-end;
     }
 }
 
+/* extra small screen */
 @media screen and (max-width: 550px) {
     nav {
         width: 50px;
@@ -495,17 +498,30 @@ footer .volume_bar .over_bar:hover {
         width: calc( 100% - 50px );
     }
 
-    footer .controls .fas{
-        font-size: 15px;
+    footer .listening,
+    footer .audio {
+        width: 130px;
+    }
+
+    footer .listening .far,
+    footer .controls .fas,
+    footer .audio .fas {
+        font-size: 12px;
     }
     
     footer .controls .fa-play-circle {
         font-size: 25px;
-        vertical-align: sub;
     }
 
-    footer .listening,
-    footer .volume {
-        width: 180px;
+    footer .listening .disk_playing_img {
+        width: 30px;
+    }
+    
+    footer .disk_name h5 {
+        font-size: 10px;
+    }
+    
+    footer .disk_name a {
+        font-size: 8px;
     }
 }
