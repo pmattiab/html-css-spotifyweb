@@ -391,10 +391,29 @@ footer .navigation_bar .over_bar {
     width: 25%;
     background-color: white;
     border-radius: 5px;
+    position: relative;
 }
 
 footer .under_bar:hover .over_bar {
     background-color: greenyellow;
+}
+
+footer .navigation_bar .circle_bar,
+footer .volume_bar .circle_bar {
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px black;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: none;
+}
+
+footer .under_bar:hover .circle_bar {
+    display: block;
 }
 
 footer .navigation_bar span {
@@ -432,9 +451,10 @@ footer .volume_bar .under_bar {
 
 footer .volume_bar .over_bar {
     height: 100%;
-    width: 25%;
+    width: 35%;
     background-color: white;
     border-radius: 5px;
+    position: relative;
 }
 
 footer .volume_bar .over_bar:hover {
@@ -523,5 +543,11 @@ footer .volume_bar .over_bar:hover {
     
     footer .disk_name a {
         font-size: 8px;
+    }
+
+    footer .navigation_bar .circle_bar,
+    footer .volume_bar .circle_bar {
+    width: 12px;
+    height: 12px;
     }
 }
