@@ -262,9 +262,15 @@ main .row .disk_img {
     position: relative;
 }
 
+/* si imposta display block alle img per
+togliere quei pixel di defaul delle immagini */
+main .row .disk_img img {
+    display: block;
+}
+
 main .disk_img .layover {
     width: 100%;
-    height: calc( 100% - 4px );
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
